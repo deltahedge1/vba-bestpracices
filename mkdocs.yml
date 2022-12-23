@@ -1,0 +1,19 @@
+site_name: My Docs
+
+theme:
+  name: "material"
+
+nav:
+  - index.md
+
+markdown_extensions:
+  - pymdownx.snippets:
+      base_path: docs
+      #base_path: $relative
+
+plugins:
+  - mike
+
+extra:
+  version:
+    provider: mike
