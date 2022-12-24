@@ -1,7 +1,9 @@
 site_name: My Docs
+site_url: https://my-website/doc/ 
 
 theme:
   name: "material"
+  custom_dir: overrides
 
 nav:
   - index.md
@@ -10,9 +12,6 @@ markdown_extensions:
   - pymdownx.snippets:
       base_path: docs
       #base_path: $relative
-
-plugins:
-  - mike
 
 extra:
   version:
