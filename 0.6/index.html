@@ -486,8 +486,8 @@ Sub copy_range_to_another_sheet(from_sheet as worksheet, to_sheet as worksheet)
 &#39;   to_sheet (worksheet object): sheet to copy to
 &#39;
 &#39;EXAMPLE:
-&#39;   call copy_range_to_another_sheet activeworkbook.sheets(&quot;sheet1&quot;) activeworkbook.sheets
-(&quot;sheet2&quot;) 
+&#39;   call copy_range_to_another_sheet activeworkbook.sheets(&quot;sheet1&quot;) _ 
+&#39;       activeworkbook.sheets(&quot;sheet2&quot;) 
 &#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;
 
     from_sheet(&quot;Sheet1&quot;).Range(&quot;A1:B10&quot;).Copy Destination:=to_sheet(&quot;Sheet2&quot;).Range(&quot;E1&quot;)
