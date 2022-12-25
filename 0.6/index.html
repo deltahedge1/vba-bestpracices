@@ -472,12 +472,28 @@ End Sub
 </details>
 <h3 id="3-utils-module-optional">3. Utils Module (optional)</h3>
 <p>This is the module where you can modularise <code>subroutines</code> and <code>functions</code> which will be used in <code>main</code> module</p>
-<details class="example" open="open">
+<details class="note" open="open">
 <summary>What is the Utils Module</summary>
-<details class="example">
-<summary>What should go in <code>Main</code> module</summary>
-<p>Say you had a solution to import and transform some data from another workbook.</p>
-<p>The steps would be:</p>
+<details class="abstract">
+<summary>Example Utils module</summary>
+<div class="highlight"><pre><span></span><code>&#39;inside utils module
+Sub copy_range_to_another_sheet(from_sheet as worksheet, to_sheet as worksheet)
+&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;
+&#39;Copies data from one worksheet to another worksheet
+&#39;
+&#39;ARGS:
+&#39;   from_sheet (worksheet object): sheet to copy from
+&#39;   to_sheet (worksheet object): sheet to copy to
+&#39;
+&#39;EXAMPLE:
+&#39;   call copy_range_to_another_sheet activeworkbook.sheets(&quot;sheet1&quot;) activeworkbook.sheets
+(&quot;sheet2&quot;) 
+&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;
+
+    from_sheet(&quot;Sheet1&quot;).Range(&quot;A1:B10&quot;).Copy Destination:=to_sheet(&quot;Sheet2&quot;).Range(&quot;E1&quot;)
+
+End Sub
+</code></pre></div>
 </details>
 </details>
 <h2 id="what-must-be-done">What must be done</h2>
