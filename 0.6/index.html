@@ -428,8 +428,6 @@ Public Const Repo ADO_FEATURE_NUMBER = &quot;&lt;ADO_number&gt;&quot;
 <details class="note" open="open">
 <summary>What is the Main module</summary>
 <p>Understanding the <code>main</code> module is best illustrated through an example.</p>
-<details class="example">
-<summary>What should go in <code>Main</code> module</summary>
 <p>Say you had a solution to import and transform some data from another workbook.</p>
 <p>The steps would be:</p>
 <ol>
@@ -439,8 +437,8 @@ Public Const Repo ADO_FEATURE_NUMBER = &quot;&lt;ADO_number&gt;&quot;
 <li>if no exceptions copy the data</li>
 <li>transform the data (e.g. fill blanks)</li>
 </ol>
-<p><strong>Each step above could be modularised into its own subroutines in another module like <code>utils</code> but would be combined in <code>main</code> as they all together create the solution.</strong></p>
-<p><em>Note: we modularise the code for two reasons. more maintainable and also easier to test the individual units of code</em></p>
+<details class="abstract">
+<summary>Example Main Module</summary>
 <div class="highlight"><pre><span></span><code>Public Sub Main
 &#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;
 &#39;Get data from another sheet and transform it by replacing blanks
@@ -455,6 +453,15 @@ Public Const Repo ADO_FEATURE_NUMBER = &quot;&lt;ADO_number&gt;&quot;
 
 End Sub
 </code></pre></div>
+</details>
+<p><strong>Each step above could be modularised into its own subroutines in another module like <code>utils</code> but would be combined in <code>main</code> as they all together create the solution.</strong></p>
+<details class="tip">
+<summary>Why do we modularise code into <code>main</code> and <code>other modules</code></summary>
+<p>We modularise the code for two reasons. </p>
+<ol>
+<li>More maintainable</li>
+<li>Easier to preform unit tests</li>
+</ol>
 </details>
 </details>
 <h3 id="3-utils-module-optional">3. Utils Module (optional)</h3>
