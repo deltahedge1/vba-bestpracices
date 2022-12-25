@@ -246,15 +246,15 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#config-module" class="md-nav__link">
-    Config Module
+  <a href="#1-config-module" class="md-nav__link">
+    1. Config Module
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#main-module" class="md-nav__link">
-    Main Module
+  <a href="#2-main-module" class="md-nav__link">
+    2. Main Module
   </a>
   
 </li>
@@ -335,15 +335,15 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#config-module" class="md-nav__link">
-    Config Module
+  <a href="#1-config-module" class="md-nav__link">
+    1. Config Module
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#main-module" class="md-nav__link">
-    Main Module
+  <a href="#2-main-module" class="md-nav__link">
+    2. Main Module
   </a>
   
 </li>
@@ -394,15 +394,16 @@
 <p>list of best practices and tips when developing VBA</p>
 <h2 id="vba-project-set-up">VBA Project Set-up</h2>
 <p>Each VBA project should include</p>
-<h3 id="config-module">Config Module</h3>
+<h3 id="1-config-module">1. Config Module</h3>
 <p>This module stores meta data of the vba project</p>
 <details class="example" open="open">
 <summary>Inside Config Module</summary>
-<p>Note we use capital for constant values</p>
+<p>Note we use <code>CAPITALS</code> for all values as they are constants</p>
 <details class="abstract" open="open">
 <summary>What to include</summary>
 </details>
-<div class="highlight"><pre><span></span><code>Public Const VERSION = &quot;&lt;version&gt;&quot;
+<div class="highlight"><pre><span></span><code>&#39;inside the config module
+Public Const VERSION = &quot;&lt;version&gt;&quot;
 Public Const NAME = &quot;&lt;name&gt;&quot;
 Public Const EMAIL = &quot;&lt;email&gt;&quot;
 Public Const DESCRIPTION = &quot;&lt;example&gt;&quot;
@@ -412,7 +413,9 @@ Public Const REPO ADO_FEATURE_NUMBER = &quot;&lt;ADO_number&gt;&quot;
 </code></pre></div>
 <details class="abstract">
 <summary>Example</summary>
-<div class="highlight"><pre><span></span><code>Public Const VERSION = &quot;0.1.0&quot;
+</details>
+<div class="highlight"><pre><span></span><code>&#39;inside the config module
+Public Const VERSION = &quot;0.1.0&quot;
 Public Const NAME = &quot;Ish Hassan&quot;
 Public Const EMAIL = &quot;ihassan@example.com&quot;
 Public Const DESCRIPTION = &quot;export and import VBA code for git versioning&quot;
@@ -420,8 +423,22 @@ Public Const REPO = &quot;https://github.com/deltahedge1/vba-bestpracices&quot;
 Public Const Repo ADO_FEATURE_NUMBER = &quot;&lt;ADO_number&gt;&quot;
 </code></pre></div>
 </details>
+<h3 id="2-main-module">2. Main Module</h3>
+<details class="example" open="open">
+<summary>Inside Config Module</summary>
 </details>
-<h3 id="main-module">Main Module</h3>
+<p>The main module is where you run the main logic of your solutions.
+This is best illustrated through an example.</p>
+<details class="example">
+<summary>How to think about what goes in the main module</summary>
+<p>Say you had a solution that to import and transform some data from another workbook.
+The steps would be:
+    1. select sheet to get data from
+    2. run validations on data
+    3. raise exceptions if any
+    4. if no exceptions copy the data
+    5. transform the data (e.g. fill blanks)</p>
+</details>
 <h3 id="utils-module-optional">Utils Module (optional)</h3>
 <h2 id="what-must-be-done">What must be done</h2>
 <ol>
@@ -429,6 +446,7 @@ Public Const Repo ADO_FEATURE_NUMBER = &quot;&lt;ADO_number&gt;&quot;
 <li>Versioning</li>
 <li>Testing and Testing documentation</li>
 <li>Use git to version control</li>
+<li>Change Log</li>
 </ol>
 <h2 id="best-practices">Best Practices</h2>
 <ol>
