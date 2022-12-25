@@ -459,8 +459,14 @@ End Sub
 <summary>Why do we modularise code into <code>main</code> and <code>other modules</code></summary>
 <p>We modularise the code for two reasons. </p>
 <ol>
-<li>More maintainable</li>
-<li>Easier to preform unit tests</li>
+<li>More maintainable<ul>
+<li>if your re-using a <code>function</code> and there is an error if you abstracted using a <code>function</code> you would only need to change it once in that that <code>function</code>.</li>
+</ul>
+</li>
+<li>Easier to preform unit tests<ul>
+<li>if all you code is in one long subroutine you would struggle to find which part of the code the error was in, and to test it you would need to run everything before it.</li>
+</ul>
+</li>
 </ol>
 </details>
 </details>
