@@ -260,8 +260,8 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#utils-module-optional" class="md-nav__link">
-    Utils Module (optional)
+  <a href="#3-utils-module-optional" class="md-nav__link">
+    3. Utils Module (optional)
   </a>
   
 </li>
@@ -349,8 +349,8 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#utils-module-optional" class="md-nav__link">
-    Utils Module (optional)
+  <a href="#3-utils-module-optional" class="md-nav__link">
+    3. Utils Module (optional)
   </a>
   
 </li>
@@ -400,7 +400,7 @@
 <summary>Inside Config Module</summary>
 <p>Note we use <code>CAPITALS</code> for all values as they are constants</p>
 <details class="abstract" open="open">
-<summary>What to include</summary>
+<summary>What Config module looks like</summary>
 <div class="highlight"><pre><span></span><code>&#39;inside the config module
 Public Const VERSION = &quot;&lt;version&gt;&quot;
 Public Const NAME = &quot;&lt;name&gt;&quot;
@@ -412,7 +412,7 @@ Public Const REPO ADO_FEATURE_NUMBER = &quot;&lt;ADO_number&gt;&quot;
 </code></pre></div>
 </details>
 <details class="abstract">
-<summary>Code</summary>
+<summary>Example Config Module</summary>
 <div class="highlight"><pre><span></span><code>&#39;inside the config module
 Public Const VERSION = &quot;0.1.0&quot;
 Public Const NAME = &quot;Ish Hassan&quot;
@@ -424,14 +424,15 @@ Public Const Repo ADO_FEATURE_NUMBER = &quot;&lt;ADO_number&gt;&quot;
 </details>
 </details>
 <h3 id="2-main-module">2. Main Module</h3>
+<pre><code>In the main module you should have a `main` subroutine which this logic for the whole solution.
+</code></pre>
 <details class="note" open="open">
 <summary>What is the Main module</summary>
-<p>The main module is where you run the main logic of your solutions.
-This is best illustrated through an example.</p>
+<p>Understanding the <code>main</code> module is best illustrated through an example.</p>
 <details class="example">
 <summary>What should go in <code>Main</code> module</summary>
 <p>Say you had a solution to import and transform some data from another workbook.</p>
-<p>The steps would be</p>
+<p>The steps would be:</p>
 <ol>
 <li>select sheet to get data from</li>
 <li>run validations on data</li>
@@ -440,22 +441,33 @@ This is best illustrated through an example.</p>
 <li>transform the data (e.g. fill blanks)</li>
 </ol>
 <p><strong>Each step above could be modularised into its own subroutines in another module like <code>utils</code> but would be combined in <code>main</code> as they all together create the solution.</strong></p>
-<p><em>we modularise the code for two reasons. more maintainable and also easier to test the individual units of code</em></p>
+<p><em>Note: we modularise the code for two reasons. more maintainable and also easier to test the individual units of code</em></p>
 <div class="highlight"><pre><span></span><code>Public Sub Main
 &#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;
 &#39;Get data from another sheet and transform it by replacing blanks
 &#39;
 &#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;    
-    call get_data
-    call validate_data
-    call copy_data_to_sheet
-    call transform_data
+
+    &#39;subroutines below would be in there own modules
+    call utils.get_data
+    call utils.validate_data
+    call utils.copy_data_to_sheet
+    call utils.transform_data
 
 End Sub
 </code></pre></div>
 </details>
 </details>
-<h3 id="utils-module-optional">Utils Module (optional)</h3>
+<h3 id="3-utils-module-optional">3. Utils Module (optional)</h3>
+<p>This is the module where you can modularise <code>subroutines</code> and <code>functions</code> which will be used in <code>main</code> module</p>
+<details class="example" open="open">
+<summary>What is the Utils Module</summary>
+<details class="example">
+<summary>What should go in <code>Main</code> module</summary>
+<p>Say you had a solution to import and transform some data from another workbook.</p>
+<p>The steps would be:</p>
+</details>
+</details>
 <h2 id="what-must-be-done">What must be done</h2>
 <ol>
 <li>Inline documentation</li>
