@@ -430,13 +430,15 @@ Public Const Repo ADO_FEATURE_NUMBER = &quot;&lt;ADO_number&gt;&quot;
 This is best illustrated through an example.</p>
 <details class="example">
 <summary>What should go in <code>Main</code> module</summary>
-<p>Say you had a solution to import and transform some data from another workbook.
-The steps would be:
-1. select sheet to get data from
-2. run validations on data
-3. raise exceptions if any
-4. if no exceptions copy the data
-5. transform the data (e.g. fill blanks)</p>
+<p>Say you had a solution to import and transform some data from another workbook.</p>
+<p>The steps would be</p>
+<ol>
+<li>select sheet to get data from</li>
+<li>run validations on data</li>
+<li>raise exceptions if any</li>
+<li>if no exceptions copy the data</li>
+<li>transform the data (e.g. fill blanks)</li>
+</ol>
 <p><strong>Each step above could be modularised into its own subroutines in another module like <code>utils</code> but would be combined in <code>main</code> as they all together create the solution.</strong></p>
 <p><em>we modularise the code for two reasons. more maintainable and also easier to test the individual units of code</em></p>
 <div class="highlight"><pre><span></span><code>Public Sub Main
