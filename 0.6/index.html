@@ -314,20 +314,15 @@
 <p>Each VBA project should include</p>
 <ol>
 <li>Config Module<ul>
-<li>this is where you will add you meta data for the project</li>
+<li>this is where you will add you meta data for the project
+<code>Public Const VERSION = "0.1.0"
+Public Const NAME = "Ish Hassan"
+Public Const EMAIL = "ihassan@example.com"
+Public Const DESCRIPTION = "&lt;what does this vba solution do&gt;"
+Public Const REPO = "&lt;repo url&gt;"
+'any other config items e.g. ADO_FEATURE_NUMBER</code></li>
 </ul>
 </li>
-</ol>
-<details class="example" open="open">
-<summary>Config Module Example</summary>
-<p><code>Public Const VERSION = "0.1.0"
-    Public Const NAME = "Ish Hassan"
-    Public Const EMAIL = "ihassan@example.com"
-    Public Const DESCRIPTION = "&lt;what does this vba solution do&gt;"
-    Public Const REPO = "&lt;repo url&gt;"
-    'any other config items e.g. ADO_FEATURE_NUMBER</code></p>
-</details>
-<ol>
 <li>Main Module</li>
 <li>Utils (optional)</li>
 </ol>
