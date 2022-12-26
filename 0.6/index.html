@@ -477,9 +477,11 @@ End Sub
 </details>
 <h3 id="3-utils-module-optional">3. Utils Module (optional)</h3>
 <p>This is the module where you can modularise <code>subroutines</code> and <code>functions</code> which will be used in <code>main</code> module</p>
-<p>You can add more modules than just <code>Utils</code> if you think it is more maintainable.</p>
+<p>Feel free to add more modules thatn just <code>Utils</code> if it helps manage your code better <img alt="😄" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/1f604.svg" title=":smile:" /></p>
 <details class="note" open="open">
-<summary>What is the Utils Module</summary>
+<summary>Understanding the Utils Module</summary>
+<p>Typically you can put subroutines or functions that need to be used mutiple times. This could be like find the last row in a column or check it a column contains blanks.</p>
+<p>These can then we re-used mutiple time through out the project, and if there is a bug you only need to fix it in one place.</p>
 <details class="abstract">
 <summary>Example Utils module</summary>
 <div class="highlight"><pre><span></span><code>&#39;inside utils module
