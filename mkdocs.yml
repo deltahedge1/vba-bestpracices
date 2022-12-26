@@ -6,12 +6,19 @@ theme:
   custom_dir: overrides
 
 nav:
-  - index.md
+  - 'homepage': index.md
 
 markdown_extensions:
   - pymdownx.snippets:
       base_path: docs
       #base_path: $relative
+  - pymdownx.emoji:
+      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:materialx.emoji.to_svg
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
 
 extra:
   version:

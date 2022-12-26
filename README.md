@@ -1,6 +1,6 @@
 # VBA Best Practices
 
-## Quick start guide
-```python
-import numpy as np
-```
+created by Ish Hassan
+
+## Description
+list of best practices and tips when developing VBA
