@@ -575,7 +575,7 @@ End Sub
 <p>example code</p>
 </details>
 </details>
-<div class="tabbed-set tabbed-alternate" data-tabs="1:1"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Subroutine</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Subroutine</label><label for="__tabbed_1_2">Function</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <div class="highlight"><pre><span></span><code>Sub example_sub
@@ -583,13 +583,14 @@ End Sub
 End Sub
 </code></pre></div>
 </div>
-</div>
-</div>
-<p>=== "Function
-    <div class="highlight"><pre><span></span><code>Function example_add(byval num1 as long, byval num2 as long) as long
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code>Function example_add(byval num1 as long, byval num2 as long) as long
     example_add = num1 + num2
 End Function
-</code></pre></div></p>
+</code></pre></div>
+</div>
+</div>
+</div>
 <details class="note">
 <summary>2. External documentation</summary>
 <p>This documentation lives outside the code and can go into much more depth than internal documentation.</p>
