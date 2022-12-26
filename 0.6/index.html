@@ -272,9 +272,22 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#production-code-needs-the-following" class="md-nav__link">
-    Production Code Needs the following
+  <a href="#moving-your-vba-code-to-production" class="md-nav__link">
+    Moving your VBA code to Production
   </a>
+  
+    <nav class="md-nav" aria-label="Moving your VBA code to Production">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-documentation-for-code" class="md-nav__link">
+    1. Documentation for code
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -361,9 +374,22 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#production-code-needs-the-following" class="md-nav__link">
-    Production Code Needs the following
+  <a href="#moving-your-vba-code-to-production" class="md-nav__link">
+    Moving your VBA code to Production
   </a>
+  
+    <nav class="md-nav" aria-label="Moving your VBA code to Production">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-documentation-for-code" class="md-nav__link">
+    1. Documentation for code
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -407,6 +433,7 @@
 <details class="abstract" open="open">
 <summary>What Config module looks like</summary>
 <div class="highlight"><pre><span></span><code>&#39;inside the config module
+
 Public Const VERSION = &quot;&lt;version&gt;&quot;
 Public Const NAME = &quot;&lt;name&gt;&quot;
 Public Const EMAIL = &quot;&lt;email&gt;&quot;
@@ -491,8 +518,8 @@ Sub copy_range_to_another_sheet(from_sheet as worksheet, to_sheet as worksheet)
 &#39;Copies data from one worksheet to another worksheet
 &#39;
 &#39;ARGS:
-&#39;   from_sheet (worksheet object): sheet to copy from
-&#39;   to_sheet (worksheet object): sheet to copy to
+&#39;   from_sheet (worksheet obj): sheet to copy from
+&#39;   to_sheet (worksheet obj): sheet to copy to
 &#39;
 &#39;EXAMPLE:
 &#39;   call copy_range_to_another_sheet activeworkbook.sheets(&quot;sheet1&quot;) _ 
@@ -506,7 +533,7 @@ End Sub
 </details>
 <details class="tip">
 <summary>Why do we modularise code into <code>Utils</code></summary>
-<p>We modularise the code for two reasons, same reasons we did it for <code>Main</code> above (are you suprised!)</p>
+<p>We modularise the code for two reasons, same reasons we did it for <code>Main</code> module above (are you suprised!)</p>
 <ol>
 <li>More maintainable<ul>
 <li>if your re-using a <code>function</code> and there is an error if you abstracted using a <code>function</code> you would only need to change it once in that that <code>function</code>.</li>
@@ -519,16 +546,35 @@ End Sub
 </ol>
 </details>
 </details>
-<h2 id="production-code-needs-the-following">Production Code Needs the following</h2>
+<h2 id="moving-your-vba-code-to-production">Moving your VBA code to Production</h2>
 <p><a href="https://www.spreadsheet1.com/vba-development-best-practices.html">reference</a></p>
 <ol>
-<li>Inline documentation for code</li>
+<li>Documentation for code</li>
 <li>Versioning</li>
 <li>Testing and Testing documentation</li>
 <li>Use git to version control</li>
 <li>Change Log</li>
 <li>README.md</li>
 </ol>
+<h3 id="1-documentation-for-code">1. Documentation for code</h3>
+<p>There are two types of documentation required for code</p>
+<ol>
+<li>Internal documentation</li>
+<li>External documentation</li>
+</ol>
+<details class="note">
+<summary>Internal documentation</summary>
+<p>This documentation lives inside the code and is meant to explain to developers what the code is intended for.</p>
+<p>It includes the following:</p>
+<ul>
+<li>description</li>
+<li>arguments and arugments types</li>
+<li>exceptions raised</li>
+<li>returns</li>
+<li>examples</li>
+<li>references</li>
+</ul>
+</details>
 <h2 id="best-practices">Best Practices</h2>
 <ol>
 <li>Option Explicit</li>
