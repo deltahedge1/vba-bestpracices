@@ -299,6 +299,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#3-testing-and-testing-documentation" class="md-nav__link">
+    3. Testing and Testing Documentation
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#best-practices" class="md-nav__link">
     Best Practices
   </a>
@@ -403,6 +410,13 @@
         <li class="md-nav__item">
   <a href="#2-versioning" class="md-nav__link">
     2. Versioning
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-testing-and-testing-documentation" class="md-nav__link">
+    3. Testing and Testing Documentation
   </a>
   
 </li>
@@ -652,9 +666,25 @@ End Function
 </ol>
 </details>
 <h2 id="2-versioning">2. Versioning</h2>
-<p>Your code should have the versioning in the <a href="#1-config-module">Config Module</a>.</p>
+<p>Your code should contain at a minimum versioning in the <a href="#1-config-module">Config Module</a>.</p>
 <p>Reccomend to use the semantic versioning system.
 <img alt="semantic versioning explained" src="https://media.geeksforgeeks.org/wp-content/uploads/semver.png" /></p>
+<h2 id="3-testing-and-testing-documentation">3. Testing and Testing Documentation</h2>
+<p>Your code should include unit tests, integration tests, and testing documentation.</p>
+<p>Considerations</p>
+<ol>
+<li>Testing as many inputs and expected outputs for your subroutines and functions</li>
+<li>Testing any expected exceptions e.g. exception handlers</li>
+<li>Testing the combination of subroutines and functions integrating together</li>
+<li>Thinking about the edge cases (as developers its upto to design solutions for the edge cases)</li>
+<li>Take a risk based approach what is the most probable what could go wrongs and focus on them but also sprinkle some edge cases in there and depending on if the edge case can have serious consoquences testing them vigirously</li>
+<li>Try to cover as many cases, and combinations as possible and not to over test</li>
+<li>testing is hard but neccesiary you will need to use your professional judgement</li>
+</ol>
+<details class="danger" open="open">
+<summary>If your testing is not documented then it is not done</summary>
+<p>Using a test matrix which shows scope on the columns and test cases on the rows is my recomendation</p>
+</details>
 <h2 id="best-practices">Best Practices</h2>
 <ol>
 <li>Option Explicit</li>
