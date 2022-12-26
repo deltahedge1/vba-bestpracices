@@ -306,6 +306,27 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#4-use-git-for-version-control" class="md-nav__link">
+    4. Use git for version control
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-change-log" class="md-nav__link">
+    5. Change Log
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-readmemd" class="md-nav__link">
+    6. README.md
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#best-practices" class="md-nav__link">
     Best Practices
   </a>
@@ -417,6 +438,27 @@
         <li class="md-nav__item">
   <a href="#3-testing-and-testing-documentation" class="md-nav__link">
     3. Testing and Testing Documentation
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-use-git-for-version-control" class="md-nav__link">
+    4. Use git for version control
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-change-log" class="md-nav__link">
+    5. Change Log
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-readmemd" class="md-nav__link">
+    6. README.md
   </a>
   
 </li>
@@ -679,12 +721,43 @@ End Function
 <li>Thinking about the edge cases (as developers its upto to design solutions for the edge cases)</li>
 <li>Take a risk based approach what is the most probable what could go wrongs and focus on them but also sprinkle some edge cases in there and depending on if the edge case can have serious consoquences testing them vigirously</li>
 <li>Try to cover as many cases, and combinations as possible and not to over test</li>
-<li>testing is hard but neccesiary you will need to use your professional judgement</li>
+<li>Testing is hard but neccesiary you will need to use your professional judgement</li>
 </ol>
 <details class="danger" open="open">
 <summary>If your testing is not documented then it is not done</summary>
 <p>Using a test matrix which shows scope on the columns and test cases on the rows is my recomendation</p>
 </details>
+<h2 id="4-use-git-for-version-control">4. Use git for version control</h2>
+<p>Export your code to normal txt files so you can version control them with git.</p>
+<p>I know if it annoying but it helps when we collaborate and if we need to roll back to previous versions.</p>
+<h2 id="5-change-log">5. Change Log</h2>
+<p>Create a CHANGELOG.md or HISTORY.md in the root directory with</p>
+<ol>
+<li>version</li>
+<li>date</li>
+<li>change in the release </li>
+</ol>
+<p>This will help you so much in the future, you can thank me then. Unless you forgot in which case you will hate yourself!</p>
+<details class="example">
+<summary>Example Change Log</summary>
+<div class="highlight"><pre><span></span><code><span class="gh"># Release History</span>
+
+<span class="gu">## dev</span>
+small changes to the validation
+
+<span class="gu">## 2.28.1 (2022-06-29)</span>
+Improvements
+
+Speed optimization in <span class="sb">`iter_content`</span> with transition to <span class="sb">`yield from`</span>. (#6170)
+Dependencies
+
+Added support for chardet 5.0.0 (#6179)
+Added support for charset-normalizer 2.1.0 (#6169)
+</code></pre></div>
+</details>
+<h2 id="6-readmemd">6. README.md</h2>
+<p>create a nice <code>REAMDE.MD</code> in the root directory of your project.</p>
+<p>Include some highlevel material only. Details should be in the documentation</p>
 <h2 id="best-practices">Best Practices</h2>
 <ol>
 <li>Option Explicit</li>
