@@ -186,8 +186,8 @@ There are two types of documentation required for code
         'adds to numbers together
         '
         'ARGS:
-        '   num1 (long): number 1 to add
-        '   num2 (long): number 1 to add
+        '   num1 (long): first number to add
+        '   num2 (long): second number to add
         '
         'RETURNS:
         '   long: the total of the two numbers
