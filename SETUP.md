@@ -65,12 +65,15 @@ building on another version
 ```
 mike deploy 0.2 --update latest #build the documentation in version 0.2 and update alias to latest
 mike serve #check your build serving site with mike
-mike deploy -.2 --push #when you are ready deploy and push
+mike deploy -0.2 --push #when you are ready deploy and push
 ```
 
 ## Material extensions
-(pymarkdown reference)[https://facelessuser.github.io/pymdown-extensions/extensions/snippets/]
-(mkdocs material extensions)[https://squidfunk.github.io/mkdocs-material/setup/extensions/]
+[pymarkdown reference](https://facelessuser.github.io/pymdown-extensions/extensions/snippets/)
+
+[mkdocs material extensions](https://squidfunk.github.io/mkdocs-material/setup/extensions/)
+
+[mkdocs admonitions (dynamic expanding sections)](https://squidfunk.github.io/mkdocs-material/reference/admonitions/#supported-types)
 
 ### Snippets for bringing in other markdowns into your documentation
 

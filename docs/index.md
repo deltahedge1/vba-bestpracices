@@ -120,7 +120,6 @@ Feel free to add more modules that just `Utils` if it helps manage your code bet
             - if all you code is in one long subroutine you would struggle to find which part of the code the error was in, and to test it you would need to run everything before it.
 
 ## Moving your VBA code to Production
-[reference](https://www.spreadsheet1.com/vba-development-best-practices.html)
 
 1. [Documentation](#1-documentation)
 2. [Versioning](#2-versioning)
@@ -186,8 +185,8 @@ There are two types of documentation required for code
         'adds to numbers together
         '
         'ARGS:
-        '   num1 (long): number 1 to add
-        '   num2 (long): number 1 to add
+        '   num1 (long): first number to add
+        '   num2 (long): second number to add
         '
         'RETURNS:
         '   long: the total of the two numbers
@@ -229,7 +228,7 @@ Considerations
 5. Try to cover as many cases, and combinations as possible and not to over test
 5. Testing is hard but neccesiary you will need to use your professional judgement
 
-???+ danger "If your testing is not documented then it is not done"
+!!! danger "If your testing is not documented then it is not done"
     Using a test matrix which shows scope on the columns and test cases on the rows is my recomendation
 
 ### 4. Use git for version control
@@ -293,3 +292,6 @@ Include some highlevel material only. Details should be in the documentation
 ### 8. Code Readability
 ### 9. Use "" instead of vbNullString
 ### 4. Structure modular code (abstraction)
+
+# References
+[Link to many of the ideas I was inspired from](https://www.spreadsheet1.com/vba-development-best-practices.html)
